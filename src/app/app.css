@@ -1,0 +1,28 @@
+.post-it {
+  width: 200px;
+  min-height: 150px;
+  padding: 15px;
+  background-color: #fffb7d; /* classic yellow */
+  border: 1px solid #f1e05a;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-size: 16px;
+  color: #333;
+  transform: rotate(-2deg); /* slight tilt */
+  position: relative;
+  margin: 20px;
+  cursor: grab;
+}
+
+/* Optional: add a little sticky tape effect */
+.post-it::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  width: 60px;
+  height: 8px;
+  background: rgba(200,200,200,0.6);
+  border-radius: 4px;
+  transform: rotate(-10deg);
+}

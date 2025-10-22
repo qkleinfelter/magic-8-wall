@@ -1,0 +1,6 @@
+<input [(ngModel)]="prompt" placeholder="What is your question?"/>
+<button (click)="ask()">Ask the wall</button>
+
+<main class="post-it">
+  {{ answer() }}
+</main>
