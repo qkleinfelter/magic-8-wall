@@ -8,9 +8,10 @@
     class="post-it"
     [class.flipped]="note().flipped"
     [style.transform]="'rotate(' + note().rotation + 'deg)'"
+    [style.backgroundColor]="note().color"
   >
     <div class="front">?</div>
-    <div class="back">{{ note().answer }}</div>
+    <div class="back"  [style.backgroundColor]="note().color">{{ note().answer }}</div>
   </div>
   }
 
