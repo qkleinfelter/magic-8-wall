@@ -1,6 +1,17 @@
-<input [(ngModel)]="prompt" placeholder="What is your question?"/>
+<input [(ngModel)]="prompt" placeholder="What is your question?" />
 <button (click)="ask()">Ask the wall</button>
 
-<main class="post-it">
-  {{ answer() }}
-</main>
+<div class="wall">
+  @for(note of notes; let i = $index; track $index) {
+
+  <div
+    class="post-it"
+    [class.flipped]="note().flipped"
+    [style.transform]="'rotate(' + note().rotation + 'deg)'"
+  >
+    <div class="front">?</div>
+    <div class="back">{{ note().answer }}</div>
+  </div>
+  }
+
+</div>
